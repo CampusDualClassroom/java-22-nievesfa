@@ -25,12 +25,13 @@ public class Exercise22 {
     }
 
     public static void printElementsAndIndex(List<String> customList) {
-        int index = 0;
-        for (String item : customList) {
-            System.out.println("Índice: " + index + ", Valor: " + item);
-            index++;
+       for (String s : customList){
+           System.out.println(s + " " + customList.indexOf(s));
+       }
 
-        }
+       //OTRA MANERA
+       // for (int i = 0; i< customList.size(); i ++{
+       // System.out.println( i + "" + customList.get(i));}
     }
 
     public static boolean addElementToList(List<String> customList, String element) {
@@ -38,20 +39,11 @@ public class Exercise22 {
 
     }
 
-
     public static void main(String[] args) {
         List<String> customList = createArrayList();
         System.out.println("Lista:");
+        addElementToList(customList, "AAAAA");
         printElementsAndIndex(customList);
-
-        boolean added = addElementToList(customList, "AAAAA");
-        if (added){
-            System.out.println("\n Elemento añadido.");
-        }else{
-            System.out.println("\n Error.");
-        }
-        printElementsAndIndex(customList);
-
     }
 
 
